@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SapKart-Order</title>
+</head>
+<body>
+
+<header align="center">
+ 	<font face="cursive" size="7" color="blue">SAPKART</font>
+ 	<hr style="height:3px;background-color: red"/>
+ </header>
+ 
+ <section style="min-height: 550px">
+ <h2 align="center">Order Product</h2>
+ 
+ <div style="width:300px; margin:0 auto">
+
+	<datalist id="plist">
+		<option value="Samsung galaxy 6">
+		<option value="Samsung galaxy 7">
+		<option value="Samsung galaxy 8">
+		<option value="Samsung galaxy 9">
+		<option value="IPhone X">
+		<option value="Virtue">
+	</datalist> 
+	<form>
+		<table cellpadding="10">
+			<tr>
+				<td>Product Name</td>
+				<td> <input type="text" list="plist"></td>
+			</tr>
+			<tr>
+				<td>Pannel Color</td>
+				<td><input type="color" ></td>
+			</tr>
+			<tr>
+				<td>Mobile</td>
+				<td><input type="tel" pattern="[1-9][0-9]{9}"></td>
+			</tr>
+			<tr>
+				<td>Number</td>
+				<td><input type="number" min="1"  max="5"></td>
+			</tr>
+			<tr>
+				<td>Number</td>
+				<td><input type="range" min="1"  max="5"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" ></td>
+				<td></td>
+			</tr>
+		
+		</table>
+	
+	</form>
+ 
+ </div>
+ </section>
+ 
+ <footer align="center">
+ <hr style="height:3px;background-color: red"/>
+ Copyright reserved &copy; 2018<br>
+ <a href="Home.html"><img src="images/home.jpg" height="50" width="50"></a>
+ </footer>
+
+</body>
+</html>
