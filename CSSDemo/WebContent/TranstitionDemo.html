@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Transition Demo</title>
+
+<style>
+
+h1{
+	text-align: center;
+}
+#container{
+	width:80%;
+	margin:0 auto;
+	display:flex;
+	flex-wrap:wrap;
+	-webkit-transition: -webkit-transform 2s;
+}
+
+#container div{
+	height:200px;
+	width:300px;
+	
+	margin:10px;
+	/*float:left;*/																																																																																																																																																																																																																																																																																																																																																																																																																																						
+}
+
+
+#div1:hover{
+	-webkit-transform: rotate(60deg);
+}
+
+#div2{
+	-webkit-transition: -webkit-transform 2s;
+}
+#div2:hover{
+	-webkit-transform: rotateX(180deg);
+}
+#div3{
+	-webkit-transition: -webkit-transform 2s;
+}
+#div3:hover{
+	-webkit-transform: rotateY(180deg);
+}
+#div4{
+	-webkit-transition: -webkit-transform 2s;
+}
+#div4:hover{
+	-webkit-transform: rotateZ(180deg);
+}
+#div5{
+	-webkit-transition: -webkit-transform 2s;
+}
+#div5:hover{
+	-webkit-transform: scale(1.5,1.5);
+}
+#div6{
+	-webkit-transition: -webkit-transform 2s;
+}
+#div6:hover{
+	-webkit-transform: scale(0.5,0.5);
+}
+#div7{
+	-webkit-transition: -webkit-transform 2s;
+}
+#div7:hover{
+	-webkit-transform: skew(130deg);
+}
+
+</style>
+</head>
+<body>
+<h1>Transition Demo</h1>
+<hr>
+
+<div id="container">
+	<div id="div1"><img  src="images/computer1.jpg"></div>
+	<div id="div2"><img  src="images/computer2.jpg"></div>
+	<div id="div3"><img  src="images/computer3.jpg"></div>
+	<div id="div4"><img  src="images/computer4.jpg"></div>
+	<div id="div5"><img  src="images/computer5.jpg"></div>
+	<div id="div6"><img  src="images/computer6.jpg"></div>
+	<div id="div7"><img  src="images/mobile1.jpg"></div>
+	
+</div>
+</body>
+</html>
