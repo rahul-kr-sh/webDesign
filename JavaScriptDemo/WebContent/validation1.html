@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+#err1,#err2, #err3{
+  color:red;
+}
+</style>
+<script>
+  
+  function validate(){
+	  document.getElementById("err1").innerHTML="";
+	  document.getElementById("err2").innerHTML="";
+	  document.getElementById("err3").innerHTML="";
+	  
+	  
+	  var name=document.frm1.txtname.value;
+	  var age=document.frm1.txtage.value;
+	  var email=document.frm1.txtemail.value;
+	  
+	  var namePat= /^[a-zA-Z]{3,15}$/;   //literal object
+	  var agePat=/^[2-5][0-9]$/;
+	  var emailPat=/^[a-zA-Z0-9.]+[@][a-z]+[.](com|co.in)$/;
+	  var res=false;
+	  if(!namePat.test(name))
+		  document.getElementById("err1").innerHTML="name can contain 3-15 alphabets";
+	  if(!agePat.test(age))
+		  document.getElementById("err2").innerHTML="age must be between 20-59";
+	  if(!emailPat.test(email))
+		  document.getElementById("err3").innerHTML="invalid email";
+	  if(namePat.test(name) && agePat.test(age) && emailPat.test(email))
+		  res=true;
+	  
+	  return res;
+  }
+	   
+
+</script>
+
+
+
+</head>
+<body>
+	<h1>Form Validation</h1>
+	<hr />
+	<form name="frm1" onsubmit="return validate();">
+	<table cellpadding="10" bgcolor="#e3e3e3">
+	
+		<!-- Number should be starts with capital letter -->
+		<tr>
+			<td>name</td>
+			<td><input type="text" id="txtname" name="txtname"/></td>
+			<td id="err1"></td>
+		</tr>
+		<!-- Age should be 2 digit number -->
+		<tr>
+			<td>age</td>
+			<td><input type="text" id="txtage" name="txtage"/></td>
+			<td id="err2"></td>
+		</tr>
+		<tr>
+			<td>email</td>
+			<td><input type="text" id="txtemail" name="txtemail"/></td>
+			<td id="err3"></td>
+		</tr>
+		<tr><td colspan="3" align="center"><input type="submit"  onsubmit="validate"/></td></tr>
+	</table>
+	</form>
+</body>
+</html>
