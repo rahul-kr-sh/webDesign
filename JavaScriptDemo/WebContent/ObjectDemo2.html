@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<script>
+	var converter={ num:0,
+					convert2Bin:function(){
+							
+							return new Number(this.num).toString(2);
+					},
+					convert2Oct:function(){
+						return Number(this.num).toString(8);
+					},
+					convert2Hexa:function(){
+						return Number(this.num).toString(16);
+					}
+			
+	};
+	
+	function process(val){
+		converter.num=document.getElementById("txtnum").value;
+		var res=0;
+		switch(val){
+		case "binary":
+			res=converter.convert2Bin();
+			window.status="Change to binary";
+			break;
+		case "octal":
+			res=converter.convert2Oct();
+			break;
+		case "hexa":
+			res=converter.convert2Hexa();
+			break;
+			default:
+		
+		}
+		document.getElementById("result").innerHTML=res;
+	}
+	
+	function Myprint(){
+		window.print();
+	}
+</script>
+</head>
+<body>
+	
+	<h1 align="center"> NUMBER CONVERSION</h1>
+	<hr>
+	<div >
+	<table align="center" cellpadding="10" bgcolor="#e3e3e3" style="border:2px solid red; border-radius:10; ">
+		<tr>
+			<td>Decimal number</td>
+			<td><input type="text" id="txtnum"/></td>
+		</tr>
+		<tr>
+		<td>Choose Conversion</td>
+			<td>
+				<select onchange="process(this.value)">
+					<option value="binary">Binary</option>
+					<option value="octal">Octal</option>
+					<option value="hexa">Hexadecimal</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Result</td>
+			<td id="result"></td>
+		</tr>
+		<tr>
+			<td>Print</td>
+			<td ><input type="button" onclick="print()"/></td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>
