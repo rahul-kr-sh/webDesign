@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>FirstApp</display-name>
+  <welcome-file-list>
+    <welcome-file>Home.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>TaxServlet</servlet-name>
+    <servlet-class>com.sapient.web.TaxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TaxServlet</servlet-name>
+    <url-pattern>/tax.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>eligibility</servlet-name>
+    <servlet-class>com.sapient.web.EligibleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>eligibility</servlet-name>
+    <url-pattern>/eligible</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QuizServlet</servlet-name>
+    <servlet-class>com.sapient.web.QuizServlet</servlet-class>
+    <init-param>
+      <param-name>passper</param-name>
+      <param-value>50</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuizServlet</servlet-name>
+    <url-pattern>/quiz</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>slogan</param-name>
+    <param-value>!We are trouble makers!</param-value>
+  </context-param>
+  <context-param>
+    <param-name>homepage</param-name>
+    <param-value>Home.jsp</param-value>
+  </context-param>
+  <servlet>
+    <description></description>
+    <display-name>DownloadServlet</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>com.sapient.web.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/downloadMX</url-pattern>
+  </servlet-mapping>
+</web-app>
